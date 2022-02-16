@@ -1,0 +1,25 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+<style>
+    * {
+        margin-left: 35px;
+        margin-top: 10px;
+        font-size:20px;
+
+    }
+    input{
+       border-color: white;
+        border-bottom-color: orange;
+        border-right-color: #ff033f;
+    }
+    label{
+        display: inline-block;
+        width:100px;
+        text-align: right;
+        font-size: 22px;
+
+    }
+</style>
+<button class="btn" height="70px" width="150" style="background-color: #ff033f; margin-top:50px;margin-left:330px; font-size: 20px;"> {{ button_label|default('Save') }} </button>
+
+{{ form_end(form) }}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New record:{% endblock %}
+
+{% block body %}
+    <style>
+        h1{
+            margin-left:250px;
+            margin-bottom:30px;
+            margin-top:50px;
+            font-size: 30px;
+
+
+        }
+        .btn a{
+            text-align:  left;
+        }
+    </style>
+    <h1 >Create new record</h1>
+
+    {{ include('scrud/_form.html.twig') }}
+
+    <button class="btn" height="70px" width="150" style="background-color: orange; margin-top:20px; margin-left:340px; font-size: 25px "><a class="btn" style="background-color: orange; color: white; margin-left: 0px" href="{{ path('scrud_index') }}">Back to list</a></button>
+{% endblock %}
