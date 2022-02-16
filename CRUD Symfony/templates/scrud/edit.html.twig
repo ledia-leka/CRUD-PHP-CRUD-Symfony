@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Record{% endblock %}
+
+{% block body %}
+    <style>
+       .update{
+           align-self: center;
+           position: absolute;
+       }
+       .update button{
+            margin-left: 100px;
+       }
+       table{
+           margin-left: 600px;
+       }
+
+    </style>
+    <h1 style="font-size: 30px; font-family: 'Times New Roman' ; margin:50px 0px 50px 0px; text-align: center">Edit record</h1>
+<div class="update">
+    {{ include('scrud/_form.html.twig', {'button_label': 'Update'}) }}</div>
+    <table>
+        <th>
+    <button style=" margin-top: 20px; margin-right:30px ; font-size: 20px; background-color: orange" class="btn"><a style="color: white; margin-left:0px" href="{{ path('scrud_index') }}">Get back to list</a></button>
+    </th>
+    <th >
+        {{ include('scrud/_delete_form.html.twig') }} </th>
+    </table>
+{% endblock %}
